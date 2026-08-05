@@ -2,7 +2,7 @@
 
 import { Routes, Route } from 'react-router'
 import Navbar from './components/Navbar/Navbar'
-import Footer from './components/footer/Footer'
+import Footer from './components/Footer/Footer'
 import Home from './Pages/Home/Home'
 import Blog from './Pages/Blog/Blog'
 import BlogDetails from './Pages/BlogDetails/BlogDetails'
