@@ -1,109 +1,78 @@
 import { Link } from 'react-router'
 
-const values = [
-  { title: 'الجودة أولاً', text: 'محتوى مدروس ومكتوب بخبرة.' },
-  { title: 'تركيز عملي', text: 'أمثلة واقعية يمكنك تطبيقها اليوم.' },
-  { title: 'مجتمع', text: 'تعلم مع آلاف المصورين حول العالم.' },
-  { title: 'دائماً محدث', text: 'أحدث الاتجاهات وأفضل الممارسات.' },
-]
-
-const team = [
-  'سالم أحمد', 'محمد علي', 'إبراهيم حسن', 'داود خالد', 'ليث محمود', 'جمال عبدالله',
-  'خالد الفيصل', 'نادر سعيد', 'هاني الشمري', 'عمر الراشد', 'فارس العلي', 'سامي الحربي',
-]
-
 export default function About() {
   return (
-    <main className="about-page" dir="rtl">
-      <section className="container py-5">
-        <div className="row g-4 align-items-center">
+    <main className="about-page py-5" dir="rtl">
+      <div className="container">
+        {/* قسم الهيدر والتعريف بالمنصة */}
+        <div className="row mb-5 align-items-center">
           <div className="col-lg-7">
-            <p className="section-label">من نحن</p>
-            <h1 className="hero-title">مهمتنا هي الإعلام والإلهام</h1>
+            <span className="section-label">من نحن</span>
+            <h1 className="hero-title mb-3">نكتشف العالم من خلف العدسة</h1>
             <p className="hero-description">
-              مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار المحترفين ونصائح عملية لتطوير مهاراتكم.
-              نحن شغوفون بمشاركة المعرفة ومساعدة المصورين على تنمية مهاراتهم من خلال محتوى عالي الجودة.
+              منصة "عدسة" هي وجهتك الأولى لاكتشاف فنون التصوير الفوتوغرافي، مشاركة الخبرات، والاطلاع على أحدث التقنيات والمعدات لصناعة محتوى بصري احترافي يلهم الجميع ويعزز مهاراتك الفنية.
             </p>
-            <div className="hero-actions">
-              <Link className="btn btn-primary btn-lg" to="/blog">
-                تصفح المقالات
-              </Link>
-            </div>
           </div>
-          <div className="col-lg-5">
-            <div className="hero-card about-highlight">
-              <p className="hero-card-label">إحصاءاتنا</p>
+          <div className="col-lg-5 mt-4 mt-lg-0">
+            <div className="about-highlight p-4 rounded-4 shadow-sm border">
+              <h3 className="h5 mb-3 text-white fw-bold">إحصائيات المنصة</h3>
               <div className="about-stats">
                 <div>
-                  <strong>+2 مليون</strong>
-                  <span>قارئ شهرياً</span>
+                  <strong>+1,500</strong>
+                  <span>مقال ورؤية فنية</span>
                 </div>
                 <div>
-                  <strong>+500</strong>
-                  <span>مقالة منشورة</span>
-                </div>
-                <div>
-                  <strong>+50</strong>
-                  <span>كاتب خبير</span>
-                </div>
-                <div>
-                  <strong>+15</strong>
-                  <span>تصنيف</span>
+                  <strong>+25 ألف</strong>
+                  <span>مصور محترف</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="container py-4">
-        <div className="row g-4">
-          <div className="col-lg-6">
-            <div className="card-post">
-              <div className="card-post-body">
-                <p className="section-label">قيمنا</p>
-                <h3>المبادئ التي توجه كل ما نقوم بإنشائه</h3>
-                <div className="value-list">
-                  {values.map((value) => (
-                    <div key={value.title} className="value-item">
-                      <h4>{value.title}</h4>
-                      <p>{value.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        {/* قسم القيم والمميزات */}
+        <div className="row mb-5">
+          <div className="col-12 mb-4">
+            <h2 className="h3 fw-bold">قيمنا ورؤيتنا</h2>
+            <p className="text-muted">نسعى دائماً لتقديم محتوى عالي الجودة يدعم مجتمع المصورين والمبدعين العرب.</p>
+          </div>
+          <div className="col-lg-4 mb-3">
+            <div className="value-item p-4 rounded-4">
+              <h4>الإبداع والاحترافية</h4>
+              <p className="small mb-0">نؤمن بأن كل لقطة تحمل قصة فريدة تستحق أن تُروى بأفضل دقة وإضاءة ممكنة.</p>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="card-post">
-              <div className="card-post-body">
-                <p className="section-label">فريقنا</p>
-                <h3>نحن مجموعة من المصورين والكتاب ذوي الخبرة</h3>
-                <div className="team-grid">
-                  {team.map((member) => (
-                    <span key={member} className="team-pill">{member}</span>
-                  ))}
-                </div>
-              </div>
+          <div className="col-lg-4 mb-3">
+            <div className="value-item p-4 rounded-4">
+              <h4>مشاركة المعرفة</h4>
+              <p className="small mb-0">نحرص على تبادل الخبرات التعليمية والتقنية بين الهواة والمحترفين في الميدان.</p>
+            </div>
+          </div>
+          <div className="col-lg-4 mb-3">
+            <div className="value-item p-4 rounded-4">
+              <h4>التطوير المستمر</h4>
+              <p className="small mb-0">مواكبة أحدث صيحات وأدوات التصوير العالمية وتطبيقاتها العملية في المشاريع.</p>
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="container py-5">
-        <div className="newsletter-card about-contact">
-          <div>
-            <p className="section-label">تواصل معنا</p>
-            <h2>لدينا أسئلة؟ دعنا نتحدث!</h2>
-            <p>نحب أن نسمع منك. سواء كان لديك سؤال حول محتوانا، أو تريد المساهمة، أو تريد فقط إلقاء التحية، لا تتردد في التواصل.</p>
+        {/* فريق العمل والفئات */}
+        <div className="row align-items-center p-4 rounded-4 border" style={{ backgroundColor: '#1a1a1e' }}>
+          <div className="col-lg-8">
+            <h3 className="h4 fw-bold mb-2 text-white">فريق العمل والمساهمون</h3>
+            <p className="text-muted mb-3">نخبة من المصورين وصناع المحتوى التقني والفني.</p>
+            <div className="team-grid">
+              <span className="team-pill">📷 مصورون فوتوغرافيون</span>
+              <span className="team-pill">✍️ كتاب محتوى تقني</span>
+              <span className="team-pill">🎨 مصممو واجهات UI/UX</span>
+              <span className="team-pill">🎬 خبراء مونتاج وإضاءة</span>
+            </div>
           </div>
-          <div className="newsletter-actions">
-            <Link className="btn btn-primary btn-lg" to="/blog">
-              تواصل معنا
-            </Link>
+          <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <Link to="/blog" className="btn btn-primary px-4 py-2">تصفح المقالات</Link>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   )
 }
